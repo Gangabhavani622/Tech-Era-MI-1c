@@ -1,0 +1,12 @@
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: #f1f5f9;
+}
+
+.logo {
+  height: 10%;
+  width: 15%;
+  margin: 3px;
+}
