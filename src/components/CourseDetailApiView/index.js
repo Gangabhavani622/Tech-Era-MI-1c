@@ -82,7 +82,9 @@ class CourseDetailApiView extends Component {
 
   renderCourseFailureView = () => (
     <div className="failure-container">
-      <img src="" alt="failure view" className="failure-image" />
+      <img src="https://assets.ccbp.in/frontend/react-js/tech-era/failure-img.png" alt="failure view" className="failure-image" />
+      <h1>Oops! Something Went Wrong</h1>
+    <p>We cannot seem to find the page you are looking for</p>
       <div>
         <button
           type="button"
