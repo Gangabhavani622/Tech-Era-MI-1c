@@ -1,24 +1,25 @@
 import {Component} from 'react'
-import {Redirect} from 'react-router-dom'
+
 import {Loader} from 'react-loader-spinner'
 import CourseItem from '../CourseItem'
 
 import './index.css'
 
 const apiStatusConstants = {
+  initial:'INITIAL'
   success: 'SUCCESS',
   inProgress: 'INPROGRESS',
   failure: 'FAILURE',
 }
 
 class Home extends Component {
-  state = {courseList: [], apiStatus: apiStatusConstants.inProgress}
+  state = {courseList: [], apiStatus: apiStatusConstants.initial}
 
   componentDidMount() {
     this.getCoursesList()
   }
 
-  onClickRetry = () => <Redirect to="/" />
+ 
 
   getCoursesList = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
@@ -66,7 +67,7 @@ class Home extends Component {
     <div className="failure-container">
       <img src="" alt="failure view" className="failure-image" />
       <div>
-        <button type="button" onClick={this.onClickRetry} className="retry-btn">
+        <button type="button" onClick={this.getCoursesList } className="retry-btn">
           Retry
         </button>
       </div>
