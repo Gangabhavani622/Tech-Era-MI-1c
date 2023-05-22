@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Loader} from 'react-loader-spinner'
+import Loader from 'react-loader-spinner'
 
 import './index.css'
 
@@ -77,7 +77,7 @@ class CourseDetailApiView extends Component {
   }
 
   renderCourseInProgressView = () =>(<div data-testid="loader" >
-                                     <Loader />
+                                     <Loader type='ThreeDots' />
                                      </div> )
 
   renderCourseFailureView = () => (
