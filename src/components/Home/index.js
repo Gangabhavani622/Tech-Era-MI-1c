@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import {Loader} from 'react-loader-spinner'
+import Loader from 'react-loader-spinner'
 import CourseItem from '../CourseItem'
 
 import './index.css'
@@ -61,7 +61,9 @@ class Home extends Component {
     )
   }
 
-  renderLoadingView = () => <Loader data-testid="loader" />
+  renderLoadingView = () =>(<div  data-testid="loader">
+    <Loader type='ThreeDots' />
+    </div> )
 
   renderFailureView = () => (
     <div className="failure-container">
